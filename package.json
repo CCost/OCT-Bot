@@ -1,6 +1,6 @@
 {
-  "name": "Galaxy",
-  "description": "Galaxy Discord Bot",
+  "name": "OCT Bot",
+  "description": "OCT Discord Bot",
   "version": "1.0.0",
   "main": "bot.js",
   "scripts": {
