@@ -1,7 +1,7 @@
 {
   "name": "OCT Bot",
   "description": "OCT Discord Bot",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "main": "bot.js",
   "scripts": {
     "start": "node bot.js"
