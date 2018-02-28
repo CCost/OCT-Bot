@@ -7,10 +7,7 @@ bot.on('ready', () => {
 	console.log("Ready!");
 	bot.user.setPresence({ status: 'online', game: { name: 'oct!help' } });
 });
-bot.on('guildDelete', guild => {
-	console.log('I have left ${guild.name} at ${new Date()}');
-}); 
-bot.on('guildMemberAdd', member => {
+bot.on('guildMemberAdd', (member) => {
 	let guild = member.guild;
 	const embed = new Discord.RichEmbed()
 		.setColor(c)
@@ -18,7 +15,7 @@ bot.on('guildMemberAdd', member => {
 		.setDescription('**Welcome <@${member.user.id}>, please enjoy your stay!**');
 	guild.mainChannel.send(embed);
 }); 
-bot.on('guildMemberRemove', member => {
+bot.on('guildMemberRemove', (member) => {
 	let guild = member.guild;
 	const embed = new Discord.RichEmbed()
 		.setColor(c)
@@ -26,10 +23,6 @@ bot.on('guildMemberRemove', member => {
 		.setDescription('**Bye <@${member.user.id}>, please come again...**');
 	guild.mainChannel.send(embed);
 }); 
-bot.on('guildCreate', guild => {
-	console.log('I have joined ${guild.name} at ${new Date()}');
-});
-
 bot.on('message', (msg) => {
 	if (msg.content === (p + "help")) {
 		const embed1 = new Discord.RichEmbed()
